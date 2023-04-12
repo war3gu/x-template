@@ -1,0 +1,32 @@
+
+
+"XLSXContent"
+{
+	"sven_great_cleave_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"AbilityTextureName"			"sven_great_cleave_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"ScriptFile"					"ability/sven_great_cleave_lua/sven_great_cleave_lua.lua"
+				
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"great_cleave_radius"	"300.0"
+			}
+			
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"great_cleave_damage"	"20 35 50 65"
+			}
+		}
+	}
+}

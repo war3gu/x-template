@@ -7,6 +7,7 @@
 {
 	"ability_test" {
 		"BaseClass" "ability_lua"
+		"ScriptFile" "ability/ability_test.lua"
 		"AbilityValues" {
 			"damage" "0.1 0.2 0.3 0.4"
 			"radius" "1 2 3 4"
@@ -20,8 +21,12 @@
 		"MaxLevel" "2"
 		"AbilityCooldown" "1 2 3 4"
 		"AbilityManaCost" "1 1 1 1"
-		"PlainKV" {
-"test" "this is test of plain kv"
-}
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags" "DOTA_UNIT_TARGET_FLAG_NONE"
+		"SpellImmunityType" "SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityUnitDamageType" "DAMAGE_TYPE_MAGICAL"
+		"AbilityCastRange" "500"
 	}
 }
