@@ -2,6 +2,7 @@
 #base "abilities.txt"
 #base "sven_great_cleave_lua.txt"
 #base "sven_gods_strength_lua.txt"
+#base "crystal_maiden_arcane_aura_lua.txt"
 
 
 "DOTAAbilities"

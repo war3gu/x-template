@@ -87,6 +87,7 @@ module.exports = {
                 { import: './loading-screen/layout.xml', filename: 'custom_loading_screen.xml' },
                 { import: './hud/layout.xml', type: 'Hud' },
                 { import: './end_screen/layout.xml', type: 'EndScreen' },
+                { import: './Item_Shop/layout.xml', type:"Hud"},
             ],
         }),
     ],
