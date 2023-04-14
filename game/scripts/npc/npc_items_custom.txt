@@ -1,3 +1,27 @@
 #base "items_list_1.txt"
 #base "items_list_2.txt"
 
+"DOTAItems"
+{
+    "item_blink_staff"
+    {
+        "ID"                            "1250"
+        "BaseClass"                     "item_lua"
+        "AbilityTextureName"            "item_blink_staff"
+        "ScriptFile"                    "item/blink_staff/blink_staff.lua"
+        "AbilityCastRange"              "0" //We could define limit here but blink dagger has unlimited range to let player use it more efficiently. The range limiting comes in the script. 0 means unlimited.
+        "AbilityCastPoint"              "0.1" //It's the wind up time of spell.
+        "AbilityCooldown"               "10.0"
+        "AbilityManaCost"               "5"
+    }
+
+    "item_linken_sphere"
+    {
+        "ID"                            "1250"
+        "BaseClass"                     "item_lua"
+        "AbilityTextureName"            "item_linken_sphere"
+        "ScriptFile"                    "item/linken_sphere/linken_sphere.lua"
+        "AbilityCooldown"               "5"
+        "AbilityManaCost"               "5"
+    }
+}
