@@ -10,7 +10,7 @@
 		"Ability1"		"tiny_toss_lua"
 		"Ability2"		"sven_gods_strength_lua"
 		"Ability3"		"crystal_maiden_arcane_aura_lua"
-		"Ability4"		""
+		"Ability4"		"pudge_rot_lua"
 		"Ability5"		""
 		"Ability6"		""
 		"Ability10"		""
