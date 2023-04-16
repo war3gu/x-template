@@ -15,7 +15,7 @@ class modifier_sven_gods_strength_lua extends BaseModifier{
         return false
     }
 
-    GetStatusEffectName(): string {
+    GetStatusEffectName(): string {                                           //这是需要触发的modifier，需要特效表现
         return "particles/status_fx/status_effect_gods_strength.vpcf"
     }
 
@@ -43,7 +43,7 @@ class modifier_sven_gods_strength_lua extends BaseModifier{
     }
 
     GetModifierAura(): string {
-        return "modifier_sven_gods_strength_child_lua"
+        return "modifier_sven_gods_strength_child_lua"          //而且加到自己身上需要转圈，加到别人身上不需要。所以要分成2个modifier
     }
 
     GetAuraSearchTeam(): UnitTargetTeam {
@@ -54,24 +54,23 @@ class modifier_sven_gods_strength_lua extends BaseModifier{
         return UnitTargetType.HERO
     }
 
-    GetAuraSearchFlags(): UnitTargetFlags {
-        return UnitTargetFlags.INVULNERABLE
+    GetAuraSearchFlags(): UnitTargetFlags {          //某些UnitTargetFlags字段，对于这个接口是无效的.UnitTargetFlags可以用于很多地方
+        return UnitTargetFlags.NONE
     }
 
     GetAuraRadius(): number {
         return this.scepter_aoe
     }
 
-    GetAuraEntityReject(entity: CDOTA_BaseNPC): boolean {
-        if(IsServer())
+    
+    GetAuraEntityReject(entity: CDOTA_BaseNPC): boolean {     //对于这种纯查询的逻辑，可以不用判断IsServer
+        if(this.GetParent() == entity)
         {
-            if(this.GetParent() == entity)
-            {
-                return true
-            }
+            return true
         }
-
-        return false
+        else{
+            return false
+        }
     }
 
     OnCreated(params: object): void {
